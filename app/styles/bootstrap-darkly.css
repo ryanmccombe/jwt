@@ -1250,10 +1250,12 @@ h6 .small,
 .h6 .small {
   font-size: 75%;
 }
+
 h1,
 .h1 {
   font-size: 39px;
 }
+
 h2,
 .h2 {
   font-size: 32px;
@@ -1322,7 +1324,7 @@ mark,
   text-transform: capitalize;
 }
 .text-muted {
-  color: #999999;
+  color: #555;
 }
 .text-primary {
   color: #375a7f;

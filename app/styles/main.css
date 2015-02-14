@@ -19,9 +19,10 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
+  margin-top: 30px;
 }
+
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
   margin-top: 0;
@@ -34,7 +35,6 @@ body {
 .footer {
   padding-top: 19px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {
@@ -46,6 +46,7 @@ body {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 }
+
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
@@ -55,6 +56,7 @@ body {
 .marketing {
   margin: 40px 0;
 }
+
 .marketing p + h4 {
   margin-top: 28px;
 }
@@ -72,12 +74,58 @@ body {
     padding-left: 0;
     padding-right: 0;
   }
+
   /* Space out the masthead */
   .header {
     margin-bottom: 30px;
   }
+
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.form-signin {
+  max-width: 280px;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.form-signin .form-signin-heading, .form-signin {
+  margin-bottom: 10px;
+}
+
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form-signin .first {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-signin .mid {
+  border-radius: 0;
+}
+
+.form-signin .last {
+  margin-bottom: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form_error_underline{
+  background-color: #FFB9B5;
+}
+
+form button {
+  margin-top: 15px;
 }
