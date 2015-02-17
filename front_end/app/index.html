@@ -28,13 +28,13 @@
 <div class="container" ng-cloak>
   <div ng-include="'views/header.html'"></div>
 
-  <div ui-view></div>
-  <div class="alert alert-{{alert.type}} animated main-alert"
-       ng-class="{'flipInY': alert.show, 'flipOutY': !alert.show, 'alert-hidden': !alert.hasBeenShown}">
-
-    <strong>{{alert.title}}</strong> {{alert.message}}
-
+  <div class="row">
+    <div class="ui-view-container">
+      <div ui-view></div>
+    </div>
   </div>
+
+  <div ng-include="'views/alert.html'"></div>
 
   <div class="footer">
     <div class="container">
@@ -62,6 +62,7 @@
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
 <!-- endbower -->
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <!-- endbuild -->
@@ -74,6 +75,9 @@
 <script src="scripts/services/alert.js"></script>
 <script src="scripts/services/authtoken.js"></script>
 <script src="scripts/controllers/header.js"></script>
+<script src="scripts/controllers/logout.js"></script>
+<script src="scripts/controllers/jobs.js"></script>
+<script src="scripts/services/authinterceptor.js"></script>
 <!-- endbuild -->
 </body>
 </html>

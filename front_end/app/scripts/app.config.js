@@ -1,5 +1,5 @@
 angular
-  .module('jwtApp').config(function($urlRouterProvider, $stateProvider){
+  .module('jwtApp').config(function ($urlRouterProvider, $stateProvider, $httpProvider) {
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
@@ -8,8 +8,21 @@ angular
         templateUrl: '/views/main.html'
       })
       .state('register', {
-      url: '/register',
-      templateUrl: '/views/register.html',
+        url: '/register',
+        templateUrl: '/views/register.html',
         controller: 'RegisterCtrl'
-    })
-  });
+      })
+      .state('logout', {
+        url: '/logout',
+        controller: 'LogoutCtrl'
+      })
+      .state('jobs', {
+        url: '/jobs',
+        templateUrl: '/views/jobs.html',
+        controller: 'JobsCtrl'
+      });
+
+    $httpProvider.interceptors.push('authInterceptor');
+  })
+
+.constant('API_URL', 'http://localhost:3000/');
