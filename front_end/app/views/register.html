@@ -1,12 +1,11 @@
-<form name="register" class="form-signin" novalidate>
+<form ng-submit="submit()" name="register" class="form-signin" novalidate>
   <h1 class="form-signin-heading text-muted">register</h1>
   <input type="email"
          name="email"
          ng-model="email"
-         ng-class="{form_error_underline: register.email.$dirty
-                                          && register.email.$invalid}"
+         ng-class="{form_error_underline: register.email.$dirty && register.email.$invalid}"
          class="form-control first"
-         placeholder="Email address"
+         placeholder="E-Mail Address"
          required
          autofocus>
   <input name="password"
@@ -19,8 +18,7 @@
          ng-model="password_confirm"
          type="password"
          validate-equals="password"
-         ng-class="{form_error_underline: register.password_confirm.$dirty
-                                          && register.password_confirm.$invalid}"
+         ng-class="{form_error_underline: register.password_confirm.$dirty && register.password_confirm.$invalid}"
          class="form-control last"
          placeholder="Confirm Password"
          required>

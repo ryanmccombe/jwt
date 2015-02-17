@@ -1,6 +1,5 @@
 'use strict';
 
-
 angular.module('jwtApp')
   .directive('validateEquals', function () {
     return {
@@ -15,7 +14,7 @@ angular.module('jwtApp')
         ngModelCtrl.$formatters.push(validateEqual);
 
         scope.$watch(attrs.validateEquals, function(){
-          ngModelCtrl.$setVieValue(ngModelCtrl.$viewValue);
+          ngModelCtrl.$setViewValue(ngModelCtrl.$viewValue);
         })
       }
     };
