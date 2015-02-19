@@ -2,14 +2,15 @@
   <input type="email"
          name="email"
          ng-model="email"
+         ng-pattern="emailRegex"
          ng-class="{form_error_underline: register.email.$dirty && register.email.$invalid}"
          class="form-control first"
          placeholder="E-Mail Address"
          required
          autofocus>
-  <input name="password"
+  <input type="password"
+         name="password"
          ng-model="password"
-         type="password"
          class="form-control mid"
          placeholder="Password"
          required>

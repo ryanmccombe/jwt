@@ -8,18 +8,18 @@
          placeholder="E-Mail Address"
          required
          autofocus>
-  <input name="password"
+  <input type="password"
+         name="password"
          ng-model="password"
-         type="password"
          ng-class="{form_error_underline: password.length<8}"
          class="form-control mid"
          placeholder="Password"
          required>
     <div class="password_bar" ng-style="style()"></div>
 
-  <input name="password_confirm"
+  <input type="password"
+         name="password_confirm"
          ng-model="password_confirm"
-         type="password"
          validate-equals="password"
          ng-class="{form_error_underline: register.password_confirm.$dirty && password_confirm != password}"
          class="form-control last"
