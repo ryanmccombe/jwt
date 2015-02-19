@@ -1,0 +1,22 @@
+<form ng-submit="submit()" name="register" class="form-signin" novalidate>
+  <h1 class="form-signin-heading text-muted">log-in</h1>
+  <input type="email"
+         name="email"
+         ng-model="email"
+         ng-class="{form_error_underline: register.email.$dirty && register.email.$invalid}"
+         class="form-control first"
+         placeholder="E-Mail Address"
+         required
+         autofocus>
+  <input name="password"
+         ng-model="password"
+         type="password"
+         class="form-control mid"
+         placeholder="Password"
+         required>
+
+  <button class="btn btn-lg btn-primary btn-block" type="submit" ng-disabled="register.$invalid">
+    Submit
+  </button><br>
+  <a class="text-muted pull-right" ui-sref="register">Create Account</a>
+</form>

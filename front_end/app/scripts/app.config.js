@@ -16,10 +16,15 @@ angular
         url: '/logout',
         controller: 'LogoutCtrl'
       })
-      .state('jobs', {
-        url: '/jobs',
-        templateUrl: '/views/jobs.html',
-        controller: 'JobsCtrl'
+      .state('links', {
+        url: '/links',
+        templateUrl: '/views/links.html',
+        controller: 'LinksCtrl'
+      })
+      .state('login', {
+        url: '/login',
+        templateUrl: '/views/login.html',
+        controller: 'LoginCtrl'
       });
 
     $httpProvider.interceptors.push('authInterceptor');
