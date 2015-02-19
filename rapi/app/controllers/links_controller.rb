@@ -2,12 +2,16 @@ class LinksController < ApplicationController
   require 'auth_token'
 
   def index
-    @links = ['Google', 'Facebook', 'Reddit', 'Yahoo']
+    @links = [
+        {name: 'Google', url: 'http://www.google.com'},
+        {name: 'Yahoo', url: 'http://www.yahoo.com'},
+        {name: 'Amazon', url: 'http://www.amazon.com'},
+        {name: 'Twitter', url: 'http://www.twitter.com'}
+    ]
+
     @user = get_user(request.headers)
 
-
     render json: {user: @user, links: @links}
-
 
   end
 

@@ -1,8 +1,8 @@
 <form ng-submit="submit()" name="register" class="form-signin" novalidate>
-  <h1 class="form-signin-heading text-muted">register</h1>
   <input type="email"
          name="email"
          ng-model="email"
+         ng-pattern="emailRegex"
          ng-class="{form_error_underline: register.email.$dirty && register.email.$invalid}"
          class="form-control first"
          placeholder="E-Mail Address"
@@ -11,19 +11,23 @@
   <input name="password"
          ng-model="password"
          type="password"
+         ng-class="{form_error_underline: password.length<8}"
          class="form-control mid"
          placeholder="Password"
          required>
+    <div class="password_bar" ng-style="style()"></div>
+
   <input name="password_confirm"
          ng-model="password_confirm"
          type="password"
          validate-equals="password"
-         ng-class="{form_error_underline: register.password_confirm.$dirty && register.password_confirm.$invalid}"
+         ng-class="{form_error_underline: register.password_confirm.$dirty && password_confirm != password}"
          class="form-control last"
          placeholder="Confirm Password"
          required>
 
-  <button class="btn btn-lg btn-primary btn-block" type="submit" ng-disabled="register.$invalid">
+  <button class="btn btn-lg btn-primary btn-block" type="submit"
+          ng-disabled="register.$invalid || password_confirm != password">
     Submit
   </button>
 </form>

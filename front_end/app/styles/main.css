@@ -86,11 +86,12 @@ body {
   }
 }
 
+/* forms */
+
 .form-signin {
   max-width: 280px;
   padding: 15px;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin: 10px auto;
 }
 
 .form-signin .form-signin-heading, .form-signin {
@@ -123,12 +124,23 @@ body {
   border-top-right-radius: 0;
 }
 .form_error_underline{
-  background-color: #FFB9B5;
+  background-color: #EBFDB4;
 }
 
 form button {
   margin-top: 15px;
 }
+
+.password_bar{
+  background-color: #00bc8c;
+  position: relative;
+  top:-3px;
+  margin-bottom: -3px;
+  height: 3px;
+}
+
+/* toasts */
+
 .main-alert {
   position: absolute;
   top: 80px;
@@ -141,6 +153,9 @@ form button {
 .alert-hidden {
   visibility: hidden;
 }
+
+/* ng-animations */
+
 .ui-view-container {
   position: relative;
 }
@@ -175,3 +190,32 @@ form button {
 [ui-view].ng-leave-active {
   opacity: 0;
 }
+
+/* Conceal browser-forced background color on auto-completed form inputs - Webkit's looks like our invalid input class */
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+input:-moz-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+input:-moz-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+input:-o-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+input:-o-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+input:-khtml-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+input:-khtml-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+
+
