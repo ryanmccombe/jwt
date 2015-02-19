@@ -10,7 +10,7 @@
 angular.module('jwtApp')
   .controller('RegisterCtrl', function ($scope, $rootScope, alert, $http, authToken) {
     $scope.submit = function(){
-      var url = 'http://localhost:3000/register';
+      var url = 'http://localhost:3000/users';
       var user = {
         email: $scope.email,
         password: $scope.password
