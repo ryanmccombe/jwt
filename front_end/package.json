@@ -1,7 +1,10 @@
 {
   "name": "jwt",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.11.2",
+    "gzippo": "^0.2.0"
+  },
   "repository": {},
   "devDependencies": {
     "grunt": "^0.4.5",

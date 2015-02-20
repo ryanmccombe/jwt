@@ -1,3 +1,7 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -169,8 +173,8 @@ body {
 }
 
 /* links */
-.new-link{
-  font-size: 1.5em;
+.link a{
+  font-size: 1.3em;
 }
 
 .new-link.ng-enter {

@@ -32,6 +32,6 @@ angular
     $httpProvider.interceptors.push('authInterceptor');
   })
 
-.constant('API_URL', 'http://localhost:3000/')
+.constant('API_URL', 'https://jwt-backend.herokuapp.com/')
 .constant('EMAIL_REGEX', /^(([^<>()[\]\\.,;:\s@']+(\.[^<>()[\]\\.,;:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
 .constant('URL_REGEX', /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/);

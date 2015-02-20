@@ -1,33 +1,48 @@
 <div class="well well-lg">
-  <h1>JSON Web Tokens</h1>
-
-  <p class="lead">
-    Cookies suck.
+  <h1>JSON Web Tokens (JWT) Sample App</h1>
+  <p>
+    This app is a sample implementation of of token based authentication using the <a href="http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html">JWT standard</a>.
   </p>
 
-  <h3>API Restrictions</h3>
-  <ul>
-    <li><a ui-sref="links">Link index</a> is public</li>
-    <li>Adding links requires valid token
+  <p>
+    No cookies are used - encoded tokens are stored locally and injected into HTTP headers for verification against the API.
+    </p>
+  <p>
+    <a href="https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/">Advantages</a> include cross-origin resource sharing, CSRF protection, and reliability on native mobile apps.
+  </p>
+
+  <p>
+    Source is <a href="https://github.com/ryanmccombe/jwt">available on GitHub</a> (Angular + Rails)<br>
+  </p><br>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">API Permissions</div>
+    <div class="panel-body">
       <ul>
-        <li>
-          <a ui-sref="register">Register an account</a>, or...
+        <li><a ui-sref="links">Link index</a> is public</li>
+        <li>Adding links requires valid token
+          <ul>
+            <li>
+              <a ui-sref="register">Register an account</a>, or...
+            </li>
+            <li>
+              <a ui-sref="login">Login</a> with:<br>
+              <strong>Email: </strong>user@example.com<br>
+              <strong>Password: </strong>password
+            </li>
+          </ul>
         </li>
-        <li>
-          <a ui-sref="login">Login</a> with:<br>
-          <strong>Email: </strong>user@example.com<br>
-          <strong>Password: </strong>password
+        <li>Removing links requires admin-flagged token
+          <ul>
+            <li>
+              <a ui-sref="login">Login</a> with:<br>
+              <strong>Email: </strong>admin@example.com<br>
+              <strong>Password: </strong>password
+            </li>
+          </ul>
         </li>
       </ul>
-    </li>
-    <li>Removing links requires admin-flagged token
-      <ul>
-        <li>
-          <a ui-sref="login">Login</a> with:<br>
-          <strong>Email: </strong>admin@example.com<br>
-          <strong>Password: </strong>password
-        </li>
-      </ul>
-    </li>
-  </ul>
+    </div>
+  </div>
+
 </div>
