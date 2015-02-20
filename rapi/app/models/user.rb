@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
 
   def as_json(options={})
-    super(:only => [:id, :name, :email, :admin])
+    super(:only => [:email, :admin])
   end
 
   private

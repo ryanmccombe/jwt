@@ -1,13 +1,33 @@
 <div class="well well-lg">
   <h1>JSON Web Tokens</h1>
+
   <p class="lead">
     Cookies suck.
   </p>
 
   <h3>API Restrictions</h3>
   <ul>
-    <li>Link index is public</li>
-    <li>Adding links requires valid token</li>
-    <li>Removing links requires admin-flagged token</li>
+    <li><a ui-sref="links">Link index</a> is public</li>
+    <li>Adding links requires valid token
+      <ul>
+        <li>
+          <a ui-sref="register">Register an account</a>, or...
+        </li>
+        <li>
+          <a ui-sref="login">Login</a> with:<br>
+          <strong>Email: </strong>user@example.com<br>
+          <strong>Password: </strong>password
+        </li>
+      </ul>
+    </li>
+    <li>Removing links requires admin-flagged token
+      <ul>
+        <li>
+          <a ui-sref="login">Login</a> with:<br>
+          <strong>Email: </strong>admin@example.com<br>
+          <strong>Password: </strong>password
+        </li>
+      </ul>
+    </li>
   </ul>
 </div>

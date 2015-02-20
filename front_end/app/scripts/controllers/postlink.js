@@ -36,10 +36,12 @@ angular.module('jwtApp')
       });
     };
 
-    $scope.deleteLink = function(id, index){
-      $http.delete(API_URL + 'links/' + id)
+    $scope.deleteLink = function(link){
+      console.log(link);
+      var index = $scope.links.indexOf(link);
+      $http.delete(API_URL + 'links/' + link.id)
         .success(function(res){
-
+          $scope.links.splice(index, 1);
           alert('success', 'Success! ', 'Link deleted');
         })
         .error(function(err){

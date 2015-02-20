@@ -142,8 +142,15 @@ body {
 .link-form{
   margin-top: 14px;
 }
+
 .glyphicon-trash{
   cursor: pointer;
+  margin-right: 5px;
+  color: #aaa;
+}
+
+.glyphicon-trash:hover{
+  color: #FFB400;
 }
 
 /* toasts */
@@ -162,7 +169,7 @@ body {
 }
 
 /* links */
-.link{
+.new-link{
   font-size: 1.5em;
 }
 
@@ -184,6 +191,21 @@ body {
 }
 
 /* ng-animations */
+
+.link.ng-leave {
+  -webkit-transition: all .8s ease-in-out;
+  -moz-transition: all .8s ease-in-out;
+  -o-transition: all .8s ease-in-out;
+  transition: all .8s ease-in-out;
+  position: relative;
+  left: 0;
+  opacity: 1;
+}
+.link.ng-leave-active {
+  left: 150px;
+  opacity: 0;
+}
+
 
 .ui-view-container {
   position: relative;
