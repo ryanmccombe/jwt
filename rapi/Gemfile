@@ -1,25 +1,23 @@
 source 'http://rubygems.org'
 
-
 gem 'rails', '4.2.0'
-
 gem 'rails-api'
 
-gem 'spring', :group => :development
+gem 'pg', :group => :production
 
-
-gem 'sqlite3'
-
+#auth
 gem 'bcrypt'
 gem 'jwt'
 gem 'rack-cors'
 
+group :development do
+  gem 'sqlite3'
+  gem 'spring'
+end
+
 #tz info on windows
 gem 'tzinfo-data', :platforms => [:mingw, :mswin, :x64_mingw]
 
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
