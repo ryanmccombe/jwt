@@ -17,7 +17,7 @@ angular.module('jwtApp')
         $scope.$apply(function(){
           $scope.newLinks.unshift(link);
         });
-      })
+      });
     }
 
     $scope.submit = function () {
@@ -40,11 +40,10 @@ angular.module('jwtApp')
       $http.delete(API_URL + 'links/' + id)
         .success(function(res){
 
-
-
+          alert('success', 'Success! ', 'Link deleted');
         })
         .error(function(err){
-          alert('warning', 'Oops!', err.message)
-        })
-    }
+          alert('warning', 'Oops! ', err.message);
+        });
+    };
   });

@@ -31,5 +31,5 @@ angular.module('jwtApp')
           password_confirmation: confirmation
         }
       }).success(authSuccessful);
-    }
+    };
   });

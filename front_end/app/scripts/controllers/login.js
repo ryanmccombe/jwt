@@ -16,7 +16,7 @@ angular.module('jwtApp')
           alert('success', 'Welcome back, ', res.user.email + '!');
         })
         .error(function(err){
-          alert('warning', 'Oops!', err.message)
-        })
-    }
+          alert('warning', 'Oops!', err.message);
+        });
+    };
   });

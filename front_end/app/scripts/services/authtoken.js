@@ -16,17 +16,17 @@ angular.module('jwtApp')
     var authToken = {
       setToken: function(token){
         cachedToken = token;
-        storage.setItem(userToken, token)
+        storage.setItem(userToken, token);
       },
       getToken: function(){
         if(!cachedToken){
           cachedToken = storage.getItem(userToken);
         }
-        return cachedToken
+        return cachedToken;
       },
       removeToken: function(){
         cachedToken = null;
-        storage.removeItem(userToken)
+        storage.removeItem(userToken);
       },
       isAuthenticated: function(){
         return !!authToken.getToken();

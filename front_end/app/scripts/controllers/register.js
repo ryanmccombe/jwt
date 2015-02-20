@@ -30,7 +30,7 @@ angular.module('jwtApp')
           alert('success', 'Account Created!', 'Welcome, ' + res.user.email + '!');
         })
         .error(function(err){
-          alert('warning', 'Oops!', err[0])
-        })
-    }
+          alert('warning', 'Oops!', err[0]);
+        });
+    };
   });

@@ -1,3 +1,5 @@
+'use strict';
+
 angular
   .module('jwtApp').config(function ($urlRouterProvider, $stateProvider, $httpProvider) {
     $urlRouterProvider.otherwise('/');
