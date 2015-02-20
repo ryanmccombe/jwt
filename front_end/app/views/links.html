@@ -1,5 +1,40 @@
-<h1>Links</h1>
-<div ng-repeat="link in links">
-  <a ng-href="{{link.url}}">{{link.name}}</a>
-</div>
+<div ng-controller="PostlinkCtrl">
 
+  <div class="panel panel-default">
+    <div class="panel-heading">Your Current Token</div>
+    <div class="panel-body" style="text-align: center">
+        {{user}}
+        <form ng-show="user" class="form link-form form-inline" ng-submit="submit()" name="link" novalidate>
+          <input type="text"
+                 name="name"
+                 ng-model="name"
+                 class="form-control"
+                 placeholder="Site Name"
+                 required
+                 autofocus>
+          <input type="text"
+                 name="url"
+                 ng-model="url"
+                 ng-pattern="urlRegex"
+                 class="form-control"
+                 ng-class="{form_error_underline: link.url.$dirty && link.url.$invalid}"
+                 placeholder="Site URL"
+                 required>
+          <button type="submit" class="btn btn-default" ng-disabled="link.$invalid">Submit Link</button>
+        </form>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="link new-link" ng-repeat="link in newLinks">
+    <span class="glyphicon glyphicon-trash" aria-hidden="true"> </span>
+    <a ng-href="{{link.link.url}}">{{link.link.name}}</a>
+    <span class="text-muted"> | {{link.link.url}}</span>
+  </div>
+  <div ng-repeat="link in links  | orderBy:'-id'">
+    <span class="glyphicon glyphicon-trash" aria-hidden="true" ng-click="deleteLink(link.id, $index)"> </span>
+    <a ng-href="{{link.url}}">{{link.name}}</a>
+    <span class="text-muted"> | {{link.url}}</span>
+  </div>
+</div>

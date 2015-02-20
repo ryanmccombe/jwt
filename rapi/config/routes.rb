@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
+  resources :links, only: [:index, :create, :destroy]
   post '/register' => 'users#create'
-  get '/links' => 'links#index'
   post '/login' => 'sessions#create'
 
   # Example of regular route:

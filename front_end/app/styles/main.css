@@ -127,7 +127,7 @@ body {
   background-color: #EBFDB4;
 }
 
-form button {
+.form-signin button {
   margin-top: 15px;
 }
 
@@ -137,6 +137,13 @@ form button {
   top:-3px;
   margin-bottom: -3px;
   height: 3px;
+}
+
+.link-form{
+  margin-top: 14px;
+}
+.glyphicon-trash{
+  cursor: pointer;
 }
 
 /* toasts */
@@ -154,6 +161,28 @@ form button {
   visibility: hidden;
 }
 
+/* links */
+.link{
+  font-size: 1.5em;
+}
+
+.new-link.ng-enter {
+  -webkit-transition: all .8s ease-in-out;
+     -moz-transition: all .8s ease-in-out;
+       -o-transition: all .8s ease-in-out;
+          transition: all .8s ease-in-out;
+  position: relative;
+  opacity: 0;
+  left: 150px;
+}
+.new-link.ng-enter-active {
+  opacity: 1;
+  left: 0;
+}
+.new-link a{
+  color: #FFD795;
+}
+
 /* ng-animations */
 
 .ui-view-container {
@@ -164,16 +193,25 @@ form button {
   position: absolute;
   left: 0;
   right: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-     -moz-transition: all 0.3s ease-in-out;
-       -o-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out;
 }
+[ui-view].ng-enter{
+  -webkit-transition: all 0.4s ease-in-out;
+     -moz-transition: all 0.4s ease-in-out;
+       -o-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+}
+[ui-view].ng-leave{
+  -webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
 [ui-view].ng-enter {
    opacity: 0;
-    -webkit-transform: scale3d(0.96, 0.96, 0.96);
-       -moz-transform: scale3d(0.96, 0.96, 0.96);
-            transform: scale3d(0.96, 0.96, 0.96);
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+       -moz-transform: scale3d(0.9, 0.9, 0.9);
+            transform: scale3d(0.9, 0.9, 0.9);
 }
 [ui-view].ng-enter-active {
    opacity: 1;
