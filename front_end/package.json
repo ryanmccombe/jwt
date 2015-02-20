@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "express": "^4.11.2",
+    "logger": "*",
     "gzippo": "^0.2.0"
   },
   "repository": {},
